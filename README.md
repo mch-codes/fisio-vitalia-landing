@@ -4,7 +4,7 @@ Landing page estática para un cliente ficticio: una clínica de fisioterapia en
 Chamberí, Madrid. Proyecto de portfolio freelance — negocio y datos ficticios,
 sin fines comerciales reales.
 
-🔗 **Demo:** https://fisio-vitalia-landing.vercel.app
+[![Demo](https://img.shields.io/badge/-Demo-10b981?style=flat-square&logo=vercel&logoColor=white)](https://fisio-vitalia-landing.vercel.app)
 
 ## Objetivo
 
