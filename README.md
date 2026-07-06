@@ -1,0 +1,76 @@
+# Clínica Fisio Vitalia
+
+Landing page estática para un cliente ficticio: una clínica de fisioterapia en
+Chamberí, Madrid. Proyecto de portfolio freelance — negocio y datos ficticios,
+sin fines comerciales reales.
+
+🔗 **Demo:** https://fisio-vitalia-landing.vercel.app
+
+## Objetivo
+
+Conseguir reservas de primera cita para una clínica dirigida por Marta,
+fisioterapeuta con clínica propia y 2 empleadas. Clientela principal:
+oficinistas con dolor de espalda y runners. A diferencia de un negocio de
+urgencias, aquí el usuario compara varias clínicas antes de decidir, así que
+la página prioriza transmitir confianza y responder dudas antes que presionar.
+
+## Stack
+
+- [Next.js](https://nextjs.org/) 14+ (App Router) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com/)
+- [lucide-react](https://lucide.dev/) para iconos
+- Exportación 100% estática (`output: 'export'`), sin backend
+- Imágenes con `next/image` (`unoptimized: true`)
+- Deploy en [Vercel](https://vercel.com/)
+
+## Estructura
+
+```
+src/
+  app/
+    layout.tsx      # Metadata (SEO, OG) y fuente Inter
+    page.tsx         # Orden de secciones de la página
+  components/
+    Hero.tsx
+    Servicios.tsx
+    Precios.tsx
+    Equipo.tsx
+    FAQ.tsx
+    Ubicacion.tsx
+    Footer.tsx
+    StickyReservaButton.tsx
+```
+
+Los textos y datos del negocio ficticio (precios, horario, dirección,
+equipo, etc.) están centralizados en [DATOS.md](./DATOS.md).
+
+## Desarrollo local
+
+```bash
+npm install
+npm run dev
+```
+
+Abre [http://localhost:3000](http://localhost:3000).
+
+## Build
+
+```bash
+npm run build
+```
+
+Genera el sitio estático en `out/`.
+
+## Deploy
+
+Proyecto conectado a Vercel; cualquier push a `main` despliega
+automáticamente. Deploy manual:
+
+```bash
+npx vercel --prod
+```
+
+---
+
+*Proyecto ficticio de portfolio. Ninguno de los datos (clínica, personas,
+dirección, teléfono) corresponde a un negocio real.*
