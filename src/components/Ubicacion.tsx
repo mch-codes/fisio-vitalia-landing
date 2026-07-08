@@ -1,4 +1,6 @@
-import { MapPin, Clock, Train } from 'lucide-react'
+import Image from 'next/image'
+import { MapPin, Clock, Train, ExternalLink } from 'lucide-react'
+import { GOOGLE_MAPS_URL } from '@/lib/datos'
 
 export default function Ubicacion() {
   return (
@@ -11,15 +13,27 @@ export default function Ubicacion() {
       </p>
 
       <div className="mt-10 grid gap-6 md:grid-cols-2 items-start">
-        <div className="rounded-2xl overflow-hidden border border-gray-200 aspect-[4/3]">
-          <iframe
-            title="Ubicación de Clínica Fisio Vitalia en Chamberí, Madrid"
-            src="https://maps.google.com/maps?q=Calle%20de%20Santa%20Engracia%2045%2C%2028010%20Madrid&output=embed"
-            className="w-full h-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+        <a
+          href={GOOGLE_MAPS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative block rounded-2xl overflow-hidden border border-gray-200 aspect-[4/3]"
+          aria-label="Abrir la ubicación de Clínica Fisio Vitalia en Google Maps (se abre en una pestaña nueva)"
+        >
+          <Image
+            src="/images/mapa-ubicacion.svg"
+            alt="Mapa estilizado del barrio de Chamberí, Madrid, señalando la ubicación de Clínica Fisio Vitalia"
+            fill
+            unoptimized
+            className="object-cover"
           />
-        </div>
+          <span className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/10 transition-colors">
+            <span className="flex items-center gap-2 bg-white/95 text-primary-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">
+              <ExternalLink size={16} />
+              Abrir en Google Maps
+            </span>
+          </span>
+        </a>
 
         <div className="flex flex-col gap-5">
           <div className="flex items-start gap-3">

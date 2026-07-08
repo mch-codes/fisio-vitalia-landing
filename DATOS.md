@@ -21,8 +21,9 @@ Cliente ficticio con fines de portfolio — no es un negocio real.
 - **Horario:** Lunes a viernes de 9:00 a 20:00. Sábados de 10:00 a 14:00.
   Domingos cerrado.
 - **Metro más cercano:** Iglesia (Línea 1), a 4 min andando
-- **Link de reservas:** https://calendly.com/placeholder (simula integración
-  con Doctoralia/Calendly)
+- **Link de reservas:** https://calendly.com/marcin-chrzuszcz/primera-cita-valoracion-inicial
+  (si en el futuro se retira este link, el CTA de reserva debe caer de vuelta
+  al `tel:` de la clínica, nunca mostrar un placeholder)
 
 ## Servicios (4)
 
@@ -97,5 +98,5 @@ Cliente ficticio con fines de portfolio — no es un negocio real.
 ## CTAs
 
 - Botón principal: "Reservar primera cita" → link externo de reservas
-  (Calendly/Doctoralia placeholder)
+  (Calendly, ver "Link de reservas" arriba); si no hay link, cae a `tel:910456789`
 - Botón secundario: "Llamar" → `tel:910456789`

@@ -2,34 +2,7 @@
 
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-
-const preguntas = [
-  {
-    pregunta: '¿Cubre mi seguro médico las sesiones?',
-    respuesta:
-      'Somos una clínica privada sin concierto directo con aseguradoras, pero emitimos factura detallada para que puedas solicitar el reembolso si tu póliza incluye asistencia con reembolso. Te recomendamos consultarlo con tu compañía antes de la cita.',
-  },
-  {
-    pregunta: '¿Qué llevo a la primera cita?',
-    respuesta:
-      'Ropa cómoda que te permita moverte, cualquier informe médico o prueba de imagen (radiografía, resonancia) relacionada con tu dolencia, y una toalla si tu sesión es de suelo pélvico.',
-  },
-  {
-    pregunta: '¿Cuánto dura una sesión?',
-    respuesta:
-      'La primera cita dura unos 60 minutos e incluye valoración y diagnóstico. Las sesiones de seguimiento duran entre 45 y 50 minutos.',
-  },
-  {
-    pregunta: '¿Necesito volante médico?',
-    respuesta:
-      'No es obligatorio. Puedes venir directamente sin derivación; nosotras hacemos la valoración inicial. Si detectamos que necesitas pruebas complementarias u otra especialidad, te lo indicamos.',
-  },
-  {
-    pregunta: '¿Qué pasa en la primera cita?',
-    respuesta:
-      'Empezamos con una entrevista sobre tu historial y síntomas, seguida de una exploración física para identificar la causa del problema. Con esa información diseñamos un plan de tratamiento personalizado y, si da tiempo, comenzamos ya con las primeras técnicas.',
-  },
-]
+import { FAQS } from '@/lib/datos'
 
 export default function FAQ() {
   const [abierta, setAbierta] = useState<number | null>(0)
@@ -45,7 +18,7 @@ export default function FAQ() {
         </p>
 
         <div className="mt-8 flex flex-col gap-3">
-          {preguntas.map(({ pregunta, respuesta }, i) => {
+          {FAQS.map(({ pregunta, respuesta }, i) => {
             const abiertaAhora = abierta === i
             return (
               <div

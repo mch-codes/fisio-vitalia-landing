@@ -28,7 +28,7 @@ la página prioriza transmitir confianza y responder dudas antes que presionar.
 ```
 src/
   app/
-    layout.tsx      # Metadata (SEO, OG) y fuente Inter
+    layout.tsx      # Metadata (SEO, OG), fuente Inter y JsonLd
     page.tsx         # Orden de secciones de la página
   components/
     Hero.tsx
@@ -39,10 +39,15 @@ src/
     Ubicacion.tsx
     Footer.tsx
     StickyReservaButton.tsx
+    JsonLd.tsx        # Structured data (MedicalClinic + FAQPage)
+  lib/
+    datos.ts          # Datos del negocio en código (URL de reserva, FAQ, etc.)
 ```
 
 Los textos y datos del negocio ficticio (precios, horario, dirección,
-equipo, etc.) están centralizados en [DATOS.md](./DATOS.md).
+equipo, etc.) están documentados en [DATOS.md](./DATOS.md) y reflejados en
+código en [src/lib/datos.ts](./src/lib/datos.ts), que es lo que importan los
+componentes (CTAs de reserva, FAQ, JSON-LD) para no repetir valores.
 
 ## Desarrollo local
 

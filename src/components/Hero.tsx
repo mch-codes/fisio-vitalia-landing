@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Phone, CalendarCheck, ShieldCheck, Award } from 'lucide-react'
+import { RESERVA_HREF, RESERVA_ES_EXTERNA } from '@/lib/datos'
 
 export default function Hero() {
   return (
@@ -25,9 +26,9 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
             <a
-              href="https://calendly.com/placeholder"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={RESERVA_HREF}
+              target={RESERVA_ES_EXTERNA ? '_blank' : undefined}
+              rel={RESERVA_ES_EXTERNA ? 'noopener noreferrer' : undefined}
               className="flex items-center justify-center gap-2 bg-acento-600 hover:bg-acento-700 transition-colors text-white font-semibold px-6 py-4 rounded-xl text-lg shadow-lg shadow-acento-900/10"
             >
               <CalendarCheck size={20} />
