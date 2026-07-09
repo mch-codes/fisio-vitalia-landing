@@ -5,19 +5,19 @@ const equipo = [
     nombre: 'Marta Delgado',
     especialidad: 'Directora clínica · Fisioterapia general y deportiva',
     colegiada: 'Colegiada nº 12345 CPFCM',
-    foto: '/images/avatar-md.svg',
+    foto: '/images/team-marta.jpg',
   },
   {
     nombre: 'Laura Ibáñez',
     especialidad: 'Fisioterapia general y punción seca',
     colegiada: 'Colegiada nº 23456 CPFCM',
-    foto: '/images/avatar-li.svg',
+    foto: '/images/team-laura.jpg',
   },
   {
     nombre: 'Sara Molina',
     especialidad: 'Suelo pélvico y fisioterapia general',
     colegiada: 'Colegiada nº 34567 CPFCM',
-    foto: '/images/avatar-sm.svg',
+    foto: '/images/team-sara.jpg',
   },
 ]
 
