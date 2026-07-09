@@ -4,14 +4,9 @@ import { RESERVA_HREF, RESERVA_ES_EXTERNA } from '@/lib/datos'
 
 export default function Hero() {
   return (
-    <section className="bg-primary-50">
-      <div className="max-w-5xl mx-auto px-4 pt-10 pb-14 md:pt-16 md:pb-20 grid md:grid-cols-2 gap-10 items-center">
+    <section className="bg-primary-50 min-h-screen flex items-center">
+      <div className="max-w-5xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-10 items-center">
         <div className="text-center md:text-left">
-          <span className="inline-flex items-center gap-1.5 bg-primary-100 text-primary-700 text-sm font-semibold px-3 py-1 rounded-full mb-5">
-            <Award size={14} />
-            Clínica de fisioterapia en Chamberí
-          </span>
-
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight text-primary-900">
             Fisioterapia en Chamberí
             <br />
@@ -57,10 +52,9 @@ export default function Hero() {
 
         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
           <Image
-            src="/images/placeholder-hero.svg"
-            alt="Sala de tratamiento de Clínica Fisio Vitalia en Chamberí (imagen de muestra)"
+            src="/images/hero-fisioterapia.jpg"
+            alt="Fisioterapeuta tratando la espalda de un paciente en consulta"
             fill
-            unoptimized
             className="object-cover"
             priority
           />
