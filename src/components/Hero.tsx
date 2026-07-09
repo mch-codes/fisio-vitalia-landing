@@ -4,16 +4,19 @@ import { RESERVA_HREF, RESERVA_ES_EXTERNA } from '@/lib/datos'
 
 export default function Hero() {
   return (
-    <section className="bg-primary-50 min-h-screen flex items-center">
-      <div className="max-w-5xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-10 items-center">
+    <section className="relative bg-primary-50 md:min-h-screen flex items-center overflow-hidden">
+      <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary-200/50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-acento-200/40 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 md:gap-16 items-center w-full">
         <div className="text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight text-primary-900">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-primary-900">
             Fisioterapia en Chamberí
             <br />
             <span className="text-primary-600">pide tu primera cita</span>
           </h1>
 
-          <p className="mt-4 text-gray-600 text-base md:text-lg max-w-xl mx-auto md:mx-0">
+          <p className="mt-5 text-gray-600 text-base md:text-lg max-w-xl mx-auto md:mx-0">
             Marta Delgado y su equipo tratan dolor de espalda, cervicales y
             lesiones deportivas con un plan de tratamiento personalizado desde
             la primera visita.
@@ -50,7 +53,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
+        <div className="relative h-80 sm:h-[26rem] md:h-[70vh] rounded-2xl overflow-hidden shadow-xl">
           <Image
             src="/images/hero-fisioterapia.jpg"
             alt="Fisioterapeuta tratando la espalda de un paciente en consulta"
